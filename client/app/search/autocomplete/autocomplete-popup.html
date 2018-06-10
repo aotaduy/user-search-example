@@ -1,0 +1,9 @@
+<ul class="autocomplete-list">
+    <li
+            class="autocomplete-item"
+            ng-repeat="item in $ctrl.items track by $index"
+            ng-class="{selected: $ctrl.selectedIndex === $index }"
+            ng-click="$ctrl.onItemClicked($index, item)">
+        {{$ctrl.displayProperty ? item[$ctrl.displayProperty] : item}}
+    </li>
+</ul>

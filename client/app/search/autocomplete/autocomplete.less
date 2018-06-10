@@ -1,0 +1,25 @@
+autocomplete-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  max-height: 400px;
+  z-index: 100;
+  cursor: pointer;
+  ul.autocomplete-list {
+    padding: 5px;
+    border-radius: 10%;
+    background-color: #f9f9f9;
+    li.autocomplete-item {
+      background-color: #f2f2f2;
+      color: black;
+      list-style: none;
+      padding: 5px 10px;
+      &.selected {
+        color: white;
+        background-color: #7f7f7f;
+      }
+    }
+  }
+
+}
