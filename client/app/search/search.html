@@ -1,21 +1,21 @@
 <div class="container">
     <div class="row">
         <!--<div class="search-form form-group col-md-12">-->
-            <!--<label for="search-input">Search User:</label>-->
-            <!--<div class="input-group">-->
-                    <!--<span class="input-group-addon">-->
-                        <!--<span class="glyphicon glyphicon-search"-->
-                              <!--aria-hidden="true"></span>-->
-                    <!--</span>-->
-                <!--<input type="text"-->
-                       <!--id="search-input"-->
-                       <!--class="search-box form-control"-->
-                       <!--ng-model="$ctrl.searchString"-->
-                       <!--ng-change="$ctrl.onSearchStringChanged($event)"-->
-                       <!--uib-typeahead="user.username for user in $ctrl.users | filter:{ username: $viewValue } : false | limitTo:8"-->
-                       <!--typeahead-on-select="$ctrl.onSearchStringChanged($event)"-->
-                <!--&gt;-->
-            <!--</div>-->
+        <!--<label for="search-input">Search User:</label>-->
+        <!--<div class="input-group">-->
+        <!--<span class="input-group-addon">-->
+        <!--<span class="glyphicon glyphicon-search"-->
+        <!--aria-hidden="true"></span>-->
+        <!--</span>-->
+        <!--<input type="text"-->
+        <!--id="search-input"-->
+        <!--class="search-box form-control"-->
+        <!--ng-model="$ctrl.searchString"-->
+        <!--ng-change="$ctrl.onSearchStringChanged($event)"-->
+        <!--uib-typeahead="user.username for user in $ctrl.users | filter:{ username: $viewValue } : false | limitTo:8"-->
+        <!--typeahead-on-select="$ctrl.onSearchStringChanged($event)"-->
+        <!--&gt;-->
+        <!--</div>-->
         <!--</div>-->
         <div class="search-form form-group col-md-12">
             <label for="search-input">Search User:</label>
@@ -39,7 +39,8 @@
     <div id="search-results"
          class="search-results row"
          ng-if="$ctrl.searchString !== ''">
-        <label for="search-results" class="col-md-12">Result:</label>
+        <label for="search-results"
+               class="col-md-12">Result:</label>
         <div class="col-md-12 row"
              ng-if="$ctrl.filteredUsers.length > 0"
              ng-repeat="each in $ctrl.filteredUsers">
@@ -51,8 +52,8 @@
             </div>
             <div class="col-sm-6  username">
                 Blog: <a ng-if="each.blog"
-                   href="{{each.blog}}"><span class="glyphicon glyphicon-edit"
-                                                   aria-hidden="true"></span></a>            </div>
+                         href="{{each.blog}}"><span class="glyphicon glyphicon-edit"
+                                                    aria-hidden="true"></span></a></div>
 
             <div class="col-sm-6 location">
                 City: {{each.city}}
@@ -62,13 +63,11 @@
             </div>
 
         </div>
-        <div ng-if="$ctrl.filteredUsers.length === 0" class="col-md-12">
+        <div ng-if="$ctrl.filteredUsers.length === 0"
+             class="col-md-12">
             There is no user in our database with the username provided. Please try again.
         </div>
     </div>
-
-</div>
-</div>
 </div>
 
 
