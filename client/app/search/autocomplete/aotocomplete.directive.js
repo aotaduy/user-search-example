@@ -11,7 +11,7 @@ export default function autocompleteDirective($compile, $filter) {
       $scope.onSelectedIndex = onSelectedIndex;
       $scope.selectedIndex = 0;
       // Event bindings
-      element.on('keydown', handleKeyUp);
+      element.on('keydown', handleKeyDown);
       document.addEventListener('click', closePopup);
       window.addEventListener('resize', reposition)
       // Watch attributes
@@ -30,7 +30,7 @@ export default function autocompleteDirective($compile, $filter) {
       element.after(popup);
       reposition();
 
-      function handleKeyUp(event) {
+      function handleKeyDown(event) {
         switch (event.which) {
         case 27: // Escape
           closePopup(event);
